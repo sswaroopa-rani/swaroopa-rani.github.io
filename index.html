@@ -3,56 +3,246 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Swaroopa Rani - Senior SDET</title>
+  <title>Swaroopa Rani - Senior SDET Portfolio</title>
   <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
+      font-family: 'Arial', sans-serif;
+      background-color: #0f0f1a;
       color: #333;
     }
+
+    /* HEADER */
     header {
-      background-color: #1a1a2e;
+      background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
       color: white;
       text-align: center;
-    padding: 50px 40px; text-align: center;
-    max-width: 800px; margin: 0 auto; 
+      padding: 80px 20px;
+      position: relative;
+      overflow: hidden;
     }
-    header h1 { font-size: 40px; margin: 0; }
-    header p  { font-size: 18px; color: #a0c4ff; }
-    section {
-      max-width: 900px;
-      margin: 40px auto;
-      background: white;
-      padding: 30px;
-      border-radius: 10px;
+    header h1 {
+      font-size: 48px;
+      margin-bottom: 15px;
+      animation: fadeInDown 1s ease;
     }
-    h2 { color: #1a1a2e; border-bottom: 2px solid #a0c4ff; padding-bottom: 8px; }
-    .skills span {
+    header p {
+      font-size: 18px;
+      color: #a0c4ff;
+      max-width: 700px;
+      margin: 0 auto 20px;
+      line-height: 1.6;
+      animation: fadeInUp 1s ease;
+    }
+    .header-badge {
       display: inline-block;
-      background: #1a1a2e;
-      color: white;
-      padding: 6px 14px;
+      background: rgba(160, 196, 255, 0.2);
+      color: #a0c4ff;
+      padding: 8px 20px;
       border-radius: 20px;
+      font-size: 14px;
       margin: 5px;
+      border: 1px solid #a0c4ff;
+      animation: fadeIn 1.5s ease;
+    }
+
+    /* ANIMATIONS */
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+
+    /* SECTIONS */
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    section {
+      background: white;
+      margin: 25px auto;
+      padding: 35px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+      max-width: 960px;
+      transition: transform 0.3s ease;
+    }
+    section:hover {
+      transform: translateY(-3px);
+    }
+    h2 {
+      color: #1a1a2e;
+      border-bottom: 3px solid #a0c4ff;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+      font-size: 26px;
+    }
+    h3 {
+      color: #0f3460;
+      margin-top: 25px;
+      font-size: 18px;
+    }
+    p {
+      line-height: 1.8;
+      margin-top: 6px;
+      color: #555;
+    }
+
+    /* SKILLS */
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 15px;
+    }
+    .skills span {
+      background: linear-gradient(135deg, #1a1a2e, #0f3460);
+      color: white;
+      padding: 8px 18px;
+      border-radius: 25px;
+      font-size: 14px;
+      transition: transform 0.2s ease;
+      cursor: default;
+    }
+    .skills span:hover {
+      transform: scale(1.1);
+    }
+
+    /* STATS */
+    .stats {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 20px;
+    }
+    .stat-box {
+      background: linear-gradient(135deg, #1a1a2e, #0f3460);
+      color: white;
+      padding: 20px 30px;
+      border-radius: 12px;
+      text-align: center;
+      min-width: 150px;
+    }
+    .stat-box h3 {
+      font-size: 32px;
+      color: #a0c4ff;
+      margin: 0;
+    }
+    .stat-box p {
+      color: #ccc;
+      font-size: 13px;
+      margin-top: 5px;
+    }
+
+    /* EXPERIENCE */
+    .exp-card {
+      border-left: 4px solid #a0c4ff;
+      padding-left: 20px;
+      margin-top: 25px;
+    }
+    .exp-card h3 { margin-top: 0; }
+    .exp-date {
+      font-size: 13px;
+      color: #888;
+      margin-top: 4px;
+    }
+
+    /* CERTIFICATIONS */
+    .cert {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      padding: 15px;
+      background: #f8f9ff;
+      border-radius: 10px;
+      margin-top: 15px;
+      border: 1px solid #e0e7ff;
+    }
+    .cert-icon { font-size: 30px; }
+
+    /* CONTACT */
+    .contact-box {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      padding: 15px;
+      background: #f8f9ff;
+      border-radius: 10px;
+      margin-top: 15px;
+      border: 1px solid #e0e7ff;
+      font-size: 16px;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: linear-gradient(135deg, #1a1a2e, #0f3460);
+      color: #a0c4ff;
+      margin-top: 40px;
       font-size: 14px;
     }
   </style>
 </head>
 <body>
 
+  <!-- HEADER -->
   <header>
-    <h1>Swaroopa Rani</h1>
-    <p>Senior Software Development Engineer in Test with 10+ years of experience 
-    delivering quality engineering solutions for healthcare, banking, and enterprise 
-    applications. Specialized in automation strategy, CI/CD integration, and 
-    regulatory-compliant systems. Recognized as a trusted quality advisor to senior 
+    <h1>👩‍💻 Swaroopa Rani</h1>
+    <p>Senior SDET | QA Automation Architect | 10+ Years Experience</p>
+    <div>
+      <span class="header-badge">🏥 Healthcare</span>
+      <span class="header-badge">🏦 Banking</span>
+      <span class="header-badge">🛒 E-Commerce</span>
+      <span class="header-badge">☁️ Cloud Testing</span>
+    </div>
+  </header>
+
+  <!-- STATS -->
+  <section>
+    <h2>📊 Career Highlights</h2>
+    <div class="stats">
+      <div class="stat-box">
+        <h3>10+</h3>
+        <p>Years Experience</p>
+      </div>
+      <div class="stat-box">
+        <h3>85%</h3>
+        <p>Regression Coverage</p>
+      </div>
+      <div class="stat-box">
+        <h3>45%</h3>
+        <p>Faster Execution</p>
+      </div>
+      <div class="stat-box">
+        <h3>30%</h3>
+        <p>Less Defect Leakage</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section>
+    <h2>👤 About Me</h2>
+    <p>Senior Software Development Engineer in Test with 10+ years of experience
+    delivering quality engineering solutions for healthcare, banking, and enterprise
+    applications. Specialized in automation strategy, CI/CD integration, and
+    regulatory-compliant systems. Recognized as a trusted quality advisor to senior
     leadership for release readiness and compliance impact assessment.</p>
   </section>
 
+  <!-- SKILLS -->
   <section>
-    <h2>Core Skills</h2>
+    <h2>🛠️ Core Skills</h2>
     <div class="skills">
       <span>Selenium WebDriver</span>
       <span>Cypress</span>
@@ -75,52 +265,92 @@
     </div>
   </section>
 
+  <!-- EXPERIENCE -->
   <section>
-    <h2>Experience</h2>
+    <h2>💼 Experience</h2>
 
-    <h3>Elevance Health — Senior Test Automation Engineer</h3>
-    <p>📅 Jan 2024 – Present | 📍 Ashburn, VA</p>
-    <p>Led enterprise automation strategy for healthcare platforms including claims, 
-    billing, and regulatory systems. Increased regression coverage from 55% to 85% 
-    and reduced regression execution time by 45% through CI/CD parallelization.</p>
+    <div class="exp-card">
+      <h3>Elevance Health — Senior Test Automation Engineer</h3>
+      <p class="exp-date">📅 Jan 2024 – Present | 📍 Ashburn, VA</p>
+      <p>Led enterprise automation strategy for healthcare platforms including claims,
+      billing, and regulatory systems. Increased regression coverage from 55% to 85%
+      and reduced regression execution time by 45% through CI/CD parallelization.</p>
+    </div>
 
-    <h3>TD Bank — Senior Automation Engineer</h3>
-    <p>📅 Dec 2021 – Dec 2023 | 📍 Charlotte, NC</p>
-    <p>Designed Python-based automation frameworks for banking workflows including 
-    transactions, settlements, and regulatory reporting. Reduced data reconciliation 
-    defects by 35% and automated 75% of critical banking workflows.</p>
+    <div class="exp-card">
+      <h3>TD Bank — Senior Automation Engineer</h3>
+      <p class="exp-date">📅 Dec 2021 – Dec 2023 | 📍 Charlotte, NC</p>
+      <p>Designed Python-based automation frameworks for banking workflows including
+      transactions, settlements, and regulatory reporting. Reduced data reconciliation
+      defects by 35% and automated 75% of critical banking workflows.</p>
+    </div>
 
-    <h3>Lowe's — QA Automation Engineer</h3>
-    <p>📅 Jan 2020 – Nov 2021 | 📍 Charlotte, NC</p>
-    <p>Built Selenium and Cypress frameworks for large-scale e-commerce platforms. 
-    Increased automation coverage from 50% to 80% within 12 months.</p>
+    <div class="exp-card">
+      <h3>Lowe's — QA Automation Engineer</h3>
+      <p class="exp-date">📅 Jan 2020 – Nov 2021 | 📍 Charlotte, NC</p>
+      <p>Built Selenium and Cypress frameworks for large-scale e-commerce platforms.
+      Increased automation coverage from 50% to 80% within 12 months.</p>
+    </div>
 
-    <h3>Genpact India — Quality Analyst</h3>
-    <p>📅 Sep 2016 – Aug 2018 | 📍 Hyderabad, India</p>
-    <p>Automated recurring report validation using Python scripting. Reduced reporting 
-    discrepancies by 32% and improved report validation cycle time by 45%.</p>
+    <div class="exp-card">
+      <h3>Genpact India — Quality Analyst</h3>
+      <p class="exp-date">📅 Sep 2016 – Aug 2018 | 📍 Hyderabad, India</p>
+      <p>Automated recurring report validation using Python scripting. Reduced reporting
+      discrepancies by 32% and improved report validation cycle time by 45%.</p>
+    </div>
 
   </section>
 
+  <!-- CERTIFICATIONS -->
   <section>
-    <h2>Certifications</h2>
-    <p>🏆 ISTQB Certified Tester - Foundation Level</p>
-    <p>🏆 Certified Professional Selenium</p>
+    <h2>🏆 Certifications</h2>
+    <div class="cert">
+      <span class="cert-icon">🥇</span>
+      <div>
+        <strong>ISTQB Certified Tester</strong>
+        <p>Foundation Level</p>
+      </div>
+    </div>
+    <div class="cert">
+      <span class="cert-icon">🥇</span>
+      <div>
+        <strong>Certified Professional Selenium</strong>
+        <p>Selenium WebDriver Certification</p>
+      </div>
+    </div>
   </section>
 
+  <!-- EDUCATION -->
   <section>
-    <h2>Education</h2>
-    <p>🎓 Master of Science in Computer Science — St. Francis College, NY (2018–2019)</p>
-    <p>🎓 Bachelor's Degree in Computer Science / Mathematics / Statistics — Osmania University, India (2013)</p>
+    <h2>🎓 Education</h2>
+    <div class="cert">
+      <span class="cert-icon">🎓</span>
+      <div>
+        <strong>Master of Science in Computer Science</strong>
+        <p>St. Francis College, NY (2018–2019)</p>
+      </div>
+    </div>
+    <div class="cert">
+      <span class="cert-icon">🎓</span>
+      <div>
+        <strong>Bachelor's Degree — Computer Science / Mathematics / Statistics</strong>
+        <p>Osmania University, India (2013)</p>
+      </div>
+    </div>
   </section>
 
-  <section class="contact">
-    <h2>Contact</h2>
-    <p>📧 Email: swarooparp26@gmail.com</p>
+  <!-- CONTACT -->
+  <section>
+    <h2>📬 Contact</h2>
+    <div class="contact-box">
+      <span>📧</span>
+      <span>swarooparp26@gmail.com</span>
+    </div>
   </section>
 
   <footer>
-    <p>© 2024 Swaroopa Rani | Senior SDET & QA Automation Architect</p>
+    <p>© 2025 Swaroopa Rani | Senior SDET & QA Automation Architect</p>
+    <p style="margin-top: 8px; font-size: 12px;">Built with HTML & CSS</p>
   </footer>
 
 </body>
