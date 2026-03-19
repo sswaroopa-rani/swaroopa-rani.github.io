@@ -11,15 +11,11 @@
       background-color: #0f0f1a;
       color: #333;
     }
-
-    /* HEADER */
     header {
       background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
       color: white;
       text-align: center;
       padding: 80px 20px;
-      position: relative;
-      overflow: hidden;
     }
     header h1 {
       font-size: 48px;
@@ -32,7 +28,6 @@
       max-width: 700px;
       margin: 0 auto 20px;
       line-height: 1.6;
-      animation: fadeInUp 1s ease;
     }
     .header-badge {
       display: inline-block;
@@ -43,10 +38,7 @@
       font-size: 14px;
       margin: 5px;
       border: 1px solid #a0c4ff;
-      animation: fadeIn 1.5s ease;
     }
-
-    /* ANIMATIONS */
     @keyframes fadeInDown {
       from { opacity: 0; transform: translateY(-30px); }
       to   { opacity: 1; transform: translateY(0); }
@@ -59,13 +51,6 @@
       from { opacity: 0; }
       to   { opacity: 1; }
     }
-
-    /* SECTIONS */
-    .container {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 20px;
-    }
     section {
       background: white;
       margin: 25px auto;
@@ -75,9 +60,7 @@
       max-width: 960px;
       transition: transform 0.3s ease;
     }
-    section:hover {
-      transform: translateY(-3px);
-    }
+    section:hover { transform: translateY(-3px); }
     h2 {
       color: #1a1a2e;
       border-bottom: 3px solid #a0c4ff;
@@ -85,18 +68,8 @@
       margin-bottom: 20px;
       font-size: 26px;
     }
-    h3 {
-      color: #0f3460;
-      margin-top: 25px;
-      font-size: 18px;
-    }
-    p {
-      line-height: 1.8;
-      margin-top: 6px;
-      color: #555;
-    }
-
-    /* SKILLS */
+    h3 { color: #0f3460; margin-top: 25px; font-size: 18px; }
+    p { line-height: 1.8; margin-top: 6px; color: #555; }
     .skills {
       display: flex;
       flex-wrap: wrap;
@@ -110,13 +83,8 @@
       border-radius: 25px;
       font-size: 14px;
       transition: transform 0.2s ease;
-      cursor: default;
     }
-    .skills span:hover {
-      transform: scale(1.1);
-    }
-
-    /* STATS */
+    .skills span:hover { transform: scale(1.1); }
     .stats {
       display: flex;
       justify-content: space-around;
@@ -132,31 +100,15 @@
       text-align: center;
       min-width: 150px;
     }
-    .stat-box h3 {
-      font-size: 32px;
-      color: #a0c4ff;
-      margin: 0;
-    }
-    .stat-box p {
-      color: #ccc;
-      font-size: 13px;
-      margin-top: 5px;
-    }
-
-    /* EXPERIENCE */
+    .stat-box h3 { font-size: 32px; color: #a0c4ff; margin: 0; }
+    .stat-box p { color: #ccc; font-size: 13px; margin-top: 5px; }
     .exp-card {
       border-left: 4px solid #a0c4ff;
       padding-left: 20px;
       margin-top: 25px;
     }
     .exp-card h3 { margin-top: 0; }
-    .exp-date {
-      font-size: 13px;
-      color: #888;
-      margin-top: 4px;
-    }
-
-    /* CERTIFICATIONS */
+    .exp-date { font-size: 13px; color: #888; margin-top: 4px; }
     .cert {
       display: flex;
       align-items: center;
@@ -168,8 +120,6 @@
       border: 1px solid #e0e7ff;
     }
     .cert-icon { font-size: 30px; }
-
-    /* CONTACT */
     .contact-box {
       display: flex;
       align-items: center;
@@ -181,8 +131,6 @@
       border: 1px solid #e0e7ff;
       font-size: 16px;
     }
-
-    /* FOOTER */
     footer {
       text-align: center;
       padding: 30px;
@@ -195,7 +143,6 @@
 </head>
 <body>
 
-  <!-- HEADER -->
   <header>
     <h1>👩‍💻 Swaroopa Rani</h1>
     <p>Senior SDET | QA Automation Architect | 10+ Years Experience</p>
@@ -207,30 +154,16 @@
     </div>
   </header>
 
-  <!-- STATS -->
   <section>
     <h2>📊 Career Highlights</h2>
     <div class="stats">
-      <div class="stat-box">
-        <h3>10+</h3>
-        <p>Years Experience</p>
-      </div>
-      <div class="stat-box">
-        <h3>85%</h3>
-        <p>Regression Coverage</p>
-      </div>
-      <div class="stat-box">
-        <h3>45%</h3>
-        <p>Faster Execution</p>
-      </div>
-      <div class="stat-box">
-        <h3>30%</h3>
-        <p>Less Defect Leakage</p>
-      </div>
+      <div class="stat-box"><h3>10+</h3><p>Years Experience</p></div>
+      <div class="stat-box"><h3>85%</h3><p>Regression Coverage</p></div>
+      <div class="stat-box"><h3>45%</h3><p>Faster Execution</p></div>
+      <div class="stat-box"><h3>30%</h3><p>Less Defect Leakage</p></div>
     </div>
   </section>
 
-  <!-- ABOUT -->
   <section>
     <h2>👤 About Me</h2>
     <p>Senior Software Development Engineer in Test with 10+ years of experience
@@ -240,7 +173,6 @@
     leadership for release readiness and compliance impact assessment.</p>
   </section>
 
-  <!-- SKILLS -->
   <section>
     <h2>🛠️ Core Skills</h2>
     <div class="skills">
@@ -265,10 +197,8 @@
     </div>
   </section>
 
-  <!-- EXPERIENCE -->
   <section>
     <h2>💼 Experience</h2>
-
     <div class="exp-card">
       <h3>Elevance Health — Senior Test Automation Engineer</h3>
       <p class="exp-date">📅 Jan 2024 – Present | 📍 Ashburn, VA</p>
@@ -276,7 +206,6 @@
       billing, and regulatory systems. Increased regression coverage from 55% to 85%
       and reduced regression execution time by 45% through CI/CD parallelization.</p>
     </div>
-
     <div class="exp-card">
       <h3>TD Bank — Senior Automation Engineer</h3>
       <p class="exp-date">📅 Dec 2021 – Dec 2023 | 📍 Charlotte, NC</p>
@@ -284,24 +213,45 @@
       transactions, settlements, and regulatory reporting. Reduced data reconciliation
       defects by 35% and automated 75% of critical banking workflows.</p>
     </div>
-
     <div class="exp-card">
       <h3>Lowe's — QA Automation Engineer</h3>
       <p class="exp-date">📅 Jan 2020 – Nov 2021 | 📍 Charlotte, NC</p>
       <p>Built Selenium and Cypress frameworks for large-scale e-commerce platforms.
       Increased automation coverage from 50% to 80% within 12 months.</p>
     </div>
-
     <div class="exp-card">
       <h3>Genpact India — Quality Analyst</h3>
       <p class="exp-date">📅 Sep 2016 – Aug 2018 | 📍 Hyderabad, India</p>
       <p>Automated recurring report validation using Python scripting. Reduced reporting
       discrepancies by 32% and improved report validation cycle time by 45%.</p>
     </div>
-
   </section>
 
-  <!-- CERTIFICATIONS -->
+  <section>
+    <h2>🚀 Projects</h2>
+    <div class="exp-card">
+      <h3>AI-Powered Test Automation Dashboard</h3>
+      <p class="exp-date">🛠️ Python | FastAPI | React | Claude AI | Jenkins</p>
+      <p>Built an AI-assisted test observability platform that ingests TestNG/Pytest/Cypress
+      XML results and uses AI to generate automated root cause analysis. Surfaces defect
+      patterns, risk levels, and fix recommendations per test failure.</p>
+    </div>
+    <div class="exp-card">
+      <h3>Healthcare Data Validation Framework</h3>
+      <p class="exp-date">🛠️ Python | SQL | FHIR | HL7 | GitHub Actions</p>
+      <p>Designed an open-source Python framework for validating HL7/FHIR message structures
+      and running SQL reconciliation checks. Generates compliance-ready audit reports
+      aligned with HIPAA standards.</p>
+    </div>
+    <div class="exp-card">
+      <h3>QA Metrics & Release Readiness Portal</h3>
+      <p class="exp-date">🛠️ React | Node.js | Jenkins API | Jira API</p>
+      <p>Built a full-stack quality dashboard that ingests test results from Jira and Jenkins,
+      calculates quality gates, and generates executive-ready release readiness reports
+      with role-based views for engineers and leadership.</p>
+    </div>
+  </section>
+
   <section>
     <h2>🏆 Certifications</h2>
     <div class="cert">
@@ -320,7 +270,6 @@
     </div>
   </section>
 
-  <!-- EDUCATION -->
   <section>
     <h2>🎓 Education</h2>
     <div class="cert">
@@ -339,8 +288,6 @@
     </div>
   </section>
 
-  <!-- CONTACT -->
-   
   <section>
     <h2>📬 Contact</h2>
     <div class="contact-box">
